@@ -1,0 +1,315 @@
+/* =====================================================
+   NOTEBOOK
+===================================================== */
+
+@media (max-width:1200px){
+
+    .container{
+        width:min(95%,1100px);
+    }
+      .cards{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+   .cards{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .countdown-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .payment-options{
+        grid-template-columns:1fr;
+    }
+
+    .flight-info{
+        flex-direction:column;
+    }
+
+}
+
+/* =====================================================
+   TABLET PEQUENO
+===================================================== */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:30px 18px;
+        min-height:auto;
+    }
+
+    .boarding-content{
+        padding:30px;
+    }
+
+    .boarding-content h1{
+        font-size:3rem;
+    }
+
+    .boarding-content h2{
+        font-size:1.8rem;
+    }
+
+    .message,
+    .countdown,
+    .timeline,
+    .experiences,
+    .contribution{
+
+        padding:80px 0;
+
+    }
+
+@media (max-width:768px){
+
+    .card img{
+
+        height:120px;
+
+    }
+
+    .card-body{
+
+        padding:14px;
+
+    }
+
+    .card-body h3{
+
+        font-size:.95rem;
+
+        margin-bottom:8px;
+
+    }
+
+    .card-body p{
+
+        font-size:.80rem;
+
+        line-height:1.4;
+
+    }
+    .card img{
+
+    height:170px;
+
+    }
+    .gift-price{
+
+        margin:14px 0;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+    .gift-price strong{
+
+        font-size:1.15rem;
+
+    }
+
+    .gift-btn{
+
+        padding:12px;
+
+        font-size:.80rem;
+
+    }
+
+    .magic-pass{
+
+        font-size:.65rem;
+
+        padding:6px 10px;
+
+    }
+
+}
+    .countdown-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .timeline-item{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .timeline-line::before{
+        display:none;
+    }
+
+    .timeline-date{
+        margin:auto;
+    }
+
+    .selected-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .payment-btn{
+
+        padding:18px;
+
+    }
+
+    .payment-panel{
+
+        padding:28px;
+
+    }
+
+    .message-box{
+
+        padding:28px;
+
+    }
+
+    .modal-content,
+    .pix-modal-content{
+
+        width:95%;
+
+        padding:28px;
+
+    }
+
+}
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width:576px){
+
+    .boarding-content{
+
+        padding:22px;
+
+    }
+
+    .boarding-content h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .boarding-content h2{
+
+        font-size:1.45rem;
+
+    }
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+    }
+
+    .message h2,
+    .countdown h2,
+    .contribution h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .time-box{
+
+        padding:25px;
+
+    }
+
+    .time-box span{
+
+        font-size:2.5rem;
+
+    }
+
+    .countdown-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .payment-btn{
+
+        gap:12px;
+
+    }
+
+    .payment-btn img{
+
+        width:45px;
+        height:45px;
+
+    }
+
+    .pix-qrcode{
+
+        width:190px;
+
+    }
+
+}
+
+/* =====================================================
+   CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width:380px){
+
+    .boarding-content h1{
+
+        font-size:2.1rem;
+
+    }
+
+    .boarding-content h2{
+
+        font-size:1.25rem;
+
+    }
+
+    .payment-btn{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .gift-price{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}

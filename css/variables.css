@@ -1,0 +1,98 @@
+:root {
+
+    /* ===== CORES ===== */
+
+    --primary: #081B3A;
+    --secondary: #0D3B84;
+    --gold: #D4AF37;
+    --gold-light: #F2D675;
+    --white: #FFFFFF;
+    --text: #F4F6FA;
+    --gray: #C8D0E0;
+
+    /* ===== BACKGROUND ===== */
+
+    --background:
+        radial-gradient(circle at top,
+            #204E9B 0%,
+            #0C2D63 40%,
+            #081B3A 100%);
+
+    /* ===== FONTES ===== */
+
+    --title:
+        "Cormorant Garamond",
+        serif;
+
+    --font:
+        "Poppins",
+        sans-serif;
+
+    /* ===== MEDIDAS ===== */
+
+    --radius:24px;
+
+    --shadow:
+
+        0 20px 60px rgba(0,0,0,.45);
+
+    --transition:.35s;
+
+}
+:root {
+
+/* CORES */
+
+--primary:#081B3A;
+--secondary:#0D3B84;
+
+--gold:#D4AF37;
+--gold-light:#F2D675;
+
+--white:#FFFFFF;
+
+--text:#F4F6FA;
+
+--gray:#C8D0E0;
+
+--success:#27AE60;
+
+--pix:#32BCAD;
+
+--mercado:#00B1EA;
+
+--danger:#D93025;
+
+
+/* BACKGROUND */
+
+--background:
+radial-gradient(
+circle at top,
+#204E9B 0%,
+#0C2D63 40%,
+#081B3A 100%
+);
+
+
+/* FONTES */
+
+--title:
+"Cormorant Garamond",
+serif;
+
+--font:
+"Poppins",
+sans-serif;
+
+
+/* TAMANHOS */
+
+--radius:24px;
+
+--shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+--transition:.35s;
+
+}

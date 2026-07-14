@@ -1,0 +1,1967 @@
+/* =====================================================
+   EXPERIÊNCIAS
+===================================================== */
+
+.card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:#FFF;
+
+    border-radius:24px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    transform:skewX(-20deg);
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transition:1s;
+
+}
+
+.card:hover::before{
+
+    left:150%;
+
+}
+
+.card::after{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.92);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.card:hover{
+
+    transform:
+        translateY(-12px)
+        rotateX(3deg);
+
+    box-shadow:
+        0 35px 60px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.contain-image{
+
+    object-fit:contain !important;
+
+    background:#EEF3FB;
+
+    padding:10px;
+
+}
+
+/* =====================================================
+   CARD BODY
+===================================================== */
+
+.card-body{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:28px;
+
+}
+
+.card-body::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:28px;
+
+    width:70px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #D4AF37,
+        #F2D675
+    );
+
+}
+
+.card-body h3{
+
+    margin-bottom:15px;
+
+    color:#0C2D63;
+
+}
+
+.card-body p{
+
+    flex:1;
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+/* =====================================================
+   TAG DA EXPERIÊNCIA
+===================================================== */
+
+.magic-pass{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    margin-bottom:15px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #F2D675
+    );
+
+    color:#081B3A;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* =====================================================
+   PREÇO
+===================================================== */
+
+.gift-price{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:22px 0;
+
+    color:#666;
+
+    font-size:.95rem;
+
+}
+
+.gift-price strong{
+
+    font-family:var(--title);
+
+    font-size:1.8rem;
+
+    color:#0C2D63;
+
+}
+
+/* =====================================================
+   BOTÃO PRESENTEAR
+===================================================== */
+
+.gift-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:#081B3A;
+
+    background:linear-gradient(
+        135deg,
+        #D4AF37,
+        #F7E189
+    );
+
+    transition:.35s;
+
+}
+
+.gift-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.45);
+
+}
+
+.gift-btn.selected{
+
+    background:#27AE60;
+
+    color:white;
+
+}
+
+/* =====================================================
+   CATEGORIAS
+===================================================== */
+
+.experience-categories{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin:50px 0;
+
+}
+
+.category-btn{
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    border:2px solid #D4AF37;
+
+    background:white;
+
+    color:#081B3A;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.category-btn:hover{
+
+    background:#D4AF37;
+
+    color:#081B3A;
+
+    transform:translateY(-3px);
+
+}
+
+.category-btn.active{
+
+    background:#081B3A;
+
+    color:white;
+
+    border-color:#081B3A;
+
+}
+/* =====================================================
+   MINHA CONTRIBUIÇÃO
+===================================================== */
+
+.contribution{
+
+    padding:120px 0;
+
+    background:linear-gradient(
+        180deg,
+        #F8F9FC 0%,
+        #EEF3FA 100%
+    );
+
+}
+
+.contribution .container{
+
+    max-width:950px;
+
+}
+
+.contribution h2{
+
+    color:#0C2D63;
+
+    font-family:var(--title);
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.contribution .section-text{
+
+    color:#666;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+}
+
+/* =====================================================
+   CONTADOR DE EXPERIÊNCIAS
+===================================================== */
+
+.selected-counter{
+
+    width:180px;
+
+    margin:40px auto;
+
+    padding:22px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:22px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.selected-counter strong{
+
+    display:block;
+
+    font-size:2.6rem;
+
+    color:#0C2D63;
+
+    font-weight:700;
+
+}
+
+.selected-counter small{
+
+    color:#777;
+
+    font-size:.95rem;
+
+}
+
+/* =====================================================
+   LISTA DE EXPERIÊNCIAS
+===================================================== */
+
+.selected-list{
+
+    margin-top:40px;
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+.empty{
+
+    padding:35px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:20px;
+
+    color:#888;
+
+    font-style:italic;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.selected-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 28px;
+
+    margin-bottom:18px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.selected-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+}
+
+.selected-item strong{
+
+    display:block;
+
+    color:#081B3A;
+
+    font-size:1.05rem;
+
+}
+
+.selected-item small{
+
+    color:#888;
+
+}
+
+.selected-item h4{
+
+    color:#D4AF37;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   SCROLL PERSONALIZADO
+===================================================== */
+
+.selected-list::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.selected-list::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+
+.selected-list::-webkit-scrollbar-track{
+
+    background:#EEF2F8;
+
+}
+
+/* =====================================================
+   TOTAL DA CONTRIBUIÇÃO
+===================================================== */
+
+.total-box{
+
+    margin-top:45px;
+
+    padding:45px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #081B3A,
+        #0C2D63
+    );
+
+    box-shadow:0 20px 55px rgba(0,0,0,.18);
+
+}
+
+.total-box small{
+
+    opacity:.85;
+
+    letter-spacing:1px;
+
+}
+
+.total-box h3{
+
+    margin:15px 0;
+
+    font-size:3rem;
+
+    color:#F2D675;
+
+}
+
+.total-box p{
+
+    max-width:520px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    opacity:.92;
+
+}
+
+/* =====================================================
+   TEXTO PAGAMENTO
+===================================================== */
+
+.payment-text{
+
+    margin:35px 0;
+
+    font-size:1rem;
+
+    color:white;
+
+    opacity:.92;
+
+    line-height:1.7;
+
+}
+/* =====================================================
+   PAGAMENTOS
+===================================================== */
+
+.payment-options{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-top:45px;
+
+}
+
+.payment-btn,
+.payment-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    width:100%;
+
+    padding:20px;
+
+    background:#FFF;
+
+    border:none;
+
+    border-radius:24px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:0 14px 35px rgba(0,0,0,.08);
+
+}
+
+.payment-btn:hover,
+.payment-option:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 22px 50px rgba(0,0,0,.16);
+
+}
+
+.payment-option.active{
+
+    border:3px solid #D4AF37;
+
+}
+
+.payment-btn img,
+.payment-option img{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+}
+
+.payment-btn strong,
+.payment-option strong{
+
+    display:block;
+
+    color:#081B3A;
+
+    font-size:1.15rem;
+
+    margin-bottom:6px;
+
+}
+
+.payment-btn small,
+.payment-option small{
+
+    color:#666;
+
+    line-height:1.5;
+
+}
+
+.mercado-btn{
+
+    border-left:6px solid #00B1EA;
+
+}
+
+.pix-btn{
+
+    border-left:6px solid #32BCAD;
+
+}
+
+/* =====================================================
+   PAINÉIS
+===================================================== */
+
+.payment-panel{
+
+    margin-top:35px;
+
+    padding:45px;
+
+    background:#FFF;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    animation:fadePayment .35s ease;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* =====================================================
+   QR CODE
+===================================================== */
+
+.pix-qrcode{
+
+    width:240px;
+
+    max-width:100%;
+
+    margin:30px auto;
+
+    display:block;
+
+    padding:18px;
+
+    background:#FFF;
+
+    border-radius:26px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+/* =====================================================
+   CHAVE PIX
+===================================================== */
+
+.pix-key-title{
+
+    margin-top:15px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+    color:#0C2D63;
+
+}
+
+#pixKey{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#F5F7FB;
+
+    text-align:center;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#081B3A;
+
+    box-shadow:inset 0 0 0 2px #E4EAF2;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================================
+   BOTÃO COPIAR PIX
+===================================================== */
+
+#copyPix{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #32BCAD,
+        #48D7C5
+    );
+
+    transition:.35s;
+
+}
+
+#copyPix:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(50,188,173,.35);
+
+}
+
+/* =====================================================
+   MERCADO PAGO
+===================================================== */
+
+.mp-description{
+
+    margin-top:25px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+.mp-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:30px;
+
+    padding:18px 35px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    color:#081B3A;
+
+    background:linear-gradient(
+        135deg,
+        #00B1EA,
+        #59D8FF
+    );
+
+    transition:.35s;
+
+}
+
+.mp-link:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(0,177,234,.30);
+
+}
+
+/* =====================================================
+   ANIMAÇÃO DOS PAINÉIS
+===================================================== */
+
+@keyframes fadePayment{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =====================================================
+   FORMULÁRIOS
+===================================================== */
+
+.message-box{
+
+    margin-top:50px;
+
+    background:#FCFDFF;
+
+    border:1px solid #E7EDF7;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 40px rgba(25,55,100,.06);
+
+}
+
+.message-box h3{
+
+    margin-bottom:12px;
+
+    color:#0C2D63;
+
+    font-size:1.6rem;
+
+}
+
+.message-box p{
+
+    margin-bottom:30px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.message-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#0C2D63;
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.message-box input,
+
+.message-box textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    margin-bottom:22px;
+
+    border:2px solid #E4EAF2;
+
+    border-radius:18px;
+
+    background:#F8FAFD;
+
+    font-family:var(--font);
+
+    font-size:1rem;
+
+    color:#222;
+
+    outline:none;
+
+    transition:.30s;
+
+}
+
+.message-box input::placeholder,
+
+.message-box textarea::placeholder{
+
+    color:#999;
+
+}
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.message-box input:focus,
+
+.message-box textarea:focus{
+
+    background:#FFF;
+
+    border-color:#D4AF37;
+
+    box-shadow:
+
+        0 0 0 4px rgba(212,175,55,.12);
+
+}
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.message-box textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+   BOTÃO ENVIAR
+===================================================== */
+
+#sendMessage{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    color:#081B3A;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #D4AF37,
+
+        #F2D675
+
+    );
+
+    transition:.35s;
+
+    box-shadow:0 14px 35px rgba(0,0,0,.12);
+
+}
+
+#sendMessage:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+/* =====================================================
+   MENSAGEM DE SUCESSO
+===================================================== */
+
+.form-success{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#EAF8EF;
+
+    color:#1C7A38;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   MENSAGEM DE ERRO
+===================================================== */
+
+.form-error{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#FFF0F0;
+
+    color:#B32424;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   CAMPOS INVÁLIDOS
+===================================================== */
+
+.input-error{
+
+    border-color:#D93025 !important;
+
+}
+
+.input-success{
+
+    border-color:#27AE60 !important;
+
+}
+/* =====================================================
+   MODAIS
+===================================================== */
+
+.modal,
+.pix-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    background:rgba(5,15,35,.75);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+}
+
+.modal.show,
+.pix-modal.show{
+
+    display:flex;
+
+}
+
+/* =====================================================
+   CONTEÚDO DO MODAL
+===================================================== */
+
+.modal-content,
+.pix-modal-content{
+
+    position:relative;
+
+    width:min(520px,95vw);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.30);
+
+    animation:modalAppear .35s ease;
+
+}
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.modal-content h2,
+.pix-modal-content h2{
+
+    margin-bottom:15px;
+
+    color:#081B3A;
+
+    font-family:var(--title);
+
+    font-size:2rem;
+
+}
+
+.modal-content p,
+.pix-modal-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================================
+   BOTÃO FECHAR
+===================================================== */
+
+.close-modal{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:1.2rem;
+
+    color:white;
+
+    background:#D93025;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.30s;
+
+}
+
+.close-modal:hover{
+
+    transform:rotate(90deg) scale(1.08);
+
+    background:#B41F17;
+
+}
+
+/* =====================================================
+   QR CODE
+===================================================== */
+
+.pix-qrcode{
+
+    width:240px;
+
+    max-width:100%;
+
+    margin:25px auto;
+
+    display:block;
+
+    border-radius:22px;
+
+    background:white;
+
+    padding:16px;
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* =====================================================
+   CHAVE PIX
+===================================================== */
+
+#pixKey{
+
+    width:100%;
+
+    padding:18px;
+
+    margin:18px 0;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#F5F7FB;
+
+    text-align:center;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:#081B3A;
+
+    box-shadow:
+
+        inset 0 0 0 2px #E4EAF2;
+
+}
+
+/* =====================================================
+   BOTÃO COPIAR
+===================================================== */
+
+#copyPix{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #32BCAD,
+        #48D7C5
+    );
+
+    transition:.30s;
+
+}
+
+#copyPix:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 15px 35px rgba(50,188,173,.35);
+
+}
+
+/* =====================================================
+   SCROLL DO MODAL
+===================================================== */
+
+.modal-content::-webkit-scrollbar,
+.pix-modal-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.modal-content::-webkit-scrollbar-thumb,
+.pix-modal-content::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+
+.modal-content::-webkit-scrollbar-track,
+.pix-modal-content::-webkit-scrollbar-track{
+
+    background:#EEF2F8;
+
+}
+
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
+
+@keyframes modalAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+/* =====================================================
+   ESTADOS
+===================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.visible{
+
+    display:block !important;
+
+}
+
+.active{
+
+    opacity:1;
+
+}
+
+.disabled{
+
+    pointer-events:none;
+
+    opacity:.55;
+
+    filter:grayscale(.4);
+
+}
+
+/* =====================================================
+   BOTÕES DESABILITADOS
+===================================================== */
+
+button:disabled,
+
+.payment-btn.disabled,
+
+.gift-btn:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+    transform:none !important;
+
+    box-shadow:none !important;
+
+}
+
+/* =====================================================
+   TRANSIÇÕES PADRÃO
+===================================================== */
+
+.card,
+.payment-btn,
+.payment-option,
+.timeline-card,
+.selected-item,
+button,
+input,
+textarea{
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        background .35s,
+        color .35s,
+        border-color .35s;
+
+}
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* =====================================================
+   FOCO (ACESSIBILIDADE)
+===================================================== */
+
+button:focus-visible,
+
+a:focus-visible,
+
+input:focus-visible,
+
+textarea:focus-visible{
+
+    outline:3px solid rgba(212,175,55,.55);
+
+    outline-offset:4px;
+
+}
+
+/* =====================================================
+   SELEÇÃO DE TEXTO
+===================================================== */
+
+::selection{
+
+    background:#D4AF37;
+
+    color:#081B3A;
+
+}
+
+/* =====================================================
+   SCROLLBAR GLOBAL
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EEF3FA;
+
+}
+
+/* =====================================================
+   RESPONSIVIDADE GERAL DOS COMPONENTES
+===================================================== */
+
+@media (max-width:900px){
+
+    .payment-options{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .selected-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .card{
+
+        border-radius:20px;
+
+    }
+
+    .card img{
+
+        height:220px;
+
+    }
+
+    .card-body{
+
+        padding:22px;
+
+    }
+
+    .gift-price{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .message-box{
+
+        padding:28px;
+
+    }
+
+    .payment-panel{
+
+        padding:28px;
+
+    }
+
+    .modal-content,
+
+    .pix-modal-content{
+
+        padding:28px;
+
+        border-radius:24px;
+
+    }
+
+    .pix-qrcode{
+
+        width:210px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .selected-counter{
+
+        width:100%;
+
+    }
+
+    .payment-btn,
+
+    .payment-option{
+
+        padding:18px;
+
+        gap:14px;
+
+    }
+
+    .payment-btn img,
+
+    .payment-option img{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .payment-btn strong,
+
+    .payment-option strong{
+
+        font-size:1rem;
+
+    }
+
+    .selected-item h4{
+
+        font-size:1.2rem;
+
+    }
+
+    #copyPix,
+
+    #sendMessage{
+
+        padding:16px;
+
+    }
+
+}
+
+/* Botão principal do boarding pass */
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 24px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:999px;
+    color:#081B3A;
+    background:linear-gradient(135deg,#F7E189,#D4AF37);
+    box-shadow:0 12px 28px rgba(0,0,0,.22);
+    font-weight:700;
+    transition:transform .35s, box-shadow .35s, filter .35s;
+}
+
+.hero-button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 35px rgba(0,0,0,.3);
+    filter:brightness(1.05);
+}
+
+.form-status{
+    min-height:24px;
+    margin-top:16px;
+    font-weight:600;
+    text-align:center;
+}
+
+.form-status.success{ color:#187A45; }
+.form-status.error{ color:#B42318; }
+
+/* Foto da Rafa no boarding pass - substitua a caixa por uma imagem quando disponível. */
+.rafa-photo{
+    display:grid;
+    place-items:center;
+    color:#081B3A;
+    text-align:center;
+    font-weight:700;
+    line-height:1.35;
+    background:linear-gradient(135deg,#F7E189,#D4AF37);
+    border:4px solid rgba(255,255,255,.85);
+    box-shadow:0 10px 25px rgba(0,0,0,.22);
+}
+
+.boarding-photo{
+    width:110px;
+    height:110px;
+    margin:8px auto 20px;
+    border-radius:50%;
+    font-size:.85rem;
+}
+
+/* Formas de pagamento */
+.payment-section{
+    padding:90px 0 120px;
+    background:#F5F7FB;
+}
+
+.payment-heading{
+    max-width:700px;
+    margin:0 auto 36px;
+    color:#081B3A;
+    font-family:var(--title);
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.15;
+    text-align:center;
+}
+
+.payment-section .payment-options{
+    max-width:760px;
+    margin:0 auto;
+}
+
+.payment-section .payment-panel{
+    max-width:760px;
+    margin:32px auto 0;
+}
+
+.payment-option{
+    min-height:104px;
+    text-align:left;
+    border:3px solid transparent;
+}
+
+.payment-option.active{
+    border-color:#D4AF37;
+    background:linear-gradient(135deg,#FFFDF6,#FFFFFF);
+}
+
+.mercado-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:24px;
+    padding:18px 28px;
+    border-radius:18px;
+    color:#081B3A;
+    background:linear-gradient(135deg,#00B1EA,#59D8FF);
+    font-weight:700;
+    transition:transform .35s, box-shadow .35s;
+}
+
+.mercado-link:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,177,234,.3);
+}
+
+/* Galeria de fotos da Rafa */
+.rafa-gallery{
+    padding:110px 0;
+    background:linear-gradient(180deg,#FFFFFF,#F5F7FB);
+    color:#222;
+}
+
+.rafa-gallery h2{
+    margin:18px 0 0;
+    color:#081B3A;
+    font-family:var(--title);
+    font-size:clamp(2.3rem,5vw,3.5rem);
+    text-align:center;
+}
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-top:44px;
+}
+
+.photo-slot{
+    display:flex;
+    aspect-ratio:4 / 5;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:12px;
+    padding:24px;
+    border:2px dashed rgba(12,45,99,.32);
+    border-radius:24px;
+    color:#0C2D63;
+    background:linear-gradient(135deg,rgba(242,214,117,.35),rgba(255,255,255,.95));
+    font-size:1.15rem;
+    font-weight:700;
+    text-align:center;
+}
+
+.photo-slot small{
+    color:#666;
+    font-size:.82rem;
+    font-weight:500;
+}
+
+
+@media (max-width:768px){
+    .payment-section{ padding:72px 0 88px; }
+    .photo-grid{ grid-template-columns:1fr; max-width:360px; margin-inline:auto; margin-top:34px; }
+}
+.payment-section p {
+  color: #333; /* ou #222 para contraste forte */
+  font-weight: 500; /* dá mais legibilidade */
+}
+.boarding-photo {
+  width: 200px;       /* defina um tamanho fixo */
+  height: 200px;      /* igual à largura para formar um quadrado */
+  overflow: hidden;   /* corta o excesso da imagem */
+  border-radius: 50%; /* garante formato circular */
+  border: 3px solid #fff;
+}
+
+.boarding-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche sem distorcer */
+}
+.photo-grid {
+  display: flex;
+  gap: 20px;              /* espaçamento entre as fotos */
+  justify-content: center;
+  flex-wrap: wrap;        /* permite quebrar linha em telas menores */
+}
+
+.photo-slot {
+  width: 350px;           /* mais largo que antes */
+  text-align: center;
+}
+
+.photo-slot img {
+  width: 100%;            /* ocupa toda a largura do slot */
+  max-height: 550px;      /* altura máxima controlada */
+  border-radius: 12px;    /* bordas arredondadas */
+  border: 3px solid #fff;
+  object-fit: cover;      /* corta o excesso sem distorcer */
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+.photo-slot small {
+  color: #333;
+  font-size: 14px;
+  display: block;
+}
