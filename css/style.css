@@ -596,151 +596,87 @@
    TIMELINE
 ===================================================== */
 
-.timeline{
-
-    padding:130px 0;
-
-    background:#FFF;
-
-    color:#222;
-
+.timeline {
+  padding:130px 0;
+  background:#FFF;
+  color:#222;
 }
 
-.timeline-line{
-
-    position:relative;
-
-    margin-top:70px;
-
+.timeline-line {
+  position:relative;
+  margin-top:70px;
 }
 
-.timeline-line::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:35px;
-
-    top:0;
-
-    bottom:0;
-
-    width:4px;
-
-    border-radius:10px;
-
-    background:
-
-    linear-gradient(
-
-        180deg,
-
-        #D4AF37,
-
-        #0C2D63
-
-    );
-
+/* remove a linha global */
+.timeline-line::before {
+  display: none;
 }
 
-.timeline-item{
-
-    position:relative;
-
-    display:flex;
-
-    gap:35px;
-
-    margin-bottom:45px;
-
+.timeline-item {
+  position:relative;
+  display:flex;
+  gap:35px;
+  margin-bottom:45px;
 }
 
-.timeline-date{
-
-    width:78px;
-    height:78px;
-
-    flex-shrink:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-    border-radius:50%;
-
-    text-align:center;
-
-    font-size:.82rem;
-
-    line-height:1.1;
-
-    font-weight:700;
-
-    color:#081B3A;
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        #D4AF37,
-
-        #F2D675
-
-    );
-
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
-
-    z-index:2;
-
+.timeline-date {
+  width:78px;
+  height:78px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  border-radius:50%;
+  text-align:center;
+  font-size:.82rem;
+  line-height:1.1;
+  font-weight:700;
+  color:#081B3A;
+  background: linear-gradient(135deg, #D4AF37, #F2D675);
+  box-shadow:0 12px 25px rgba(0,0,0,.18);
+  z-index:2;
 }
 
-.timeline-card{
-
-    flex:1;
-
-    padding:28px;
-
-    border-radius:20px;
-
-    background:#FFF;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    transition:.35s;
-
+.timeline-card {
+  flex:1;
+  padding:28px;
+  border-radius:20px;
+  background:#FFF;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.35s;
 }
 
-.timeline-card:hover{
-
-    transform:translateX(8px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-
+.timeline-card:hover {
+  transform:translateX(8px);
+  box-shadow:0 20px 45px rgba(0,0,0,.12);
 }
 
-.timeline-card h3{
-
-    margin-bottom:15px;
-
-    font-size:1.35rem;
-
-    color:#0C2D63;
-
+.timeline-card h3 {
+  margin-bottom:15px;
+  font-size:1.35rem;
+  color:#0C2D63;
 }
 
-.timeline-card p{
+.timeline-card p {
+  line-height:1.8;
+  color:#666;
+}
 
-    line-height:1.8;
+/* linha por item */
+.timeline-item::after {
+  content:"";
+  position:absolute;
+  left:35px; /* centro da bolinha */
+  top:78px;  /* começa logo abaixo da bolinha */
+  width:4px;
+  height: calc(100% - 78px + 45px); /* inclui o margin-bottom */
+  border-radius:10px;
+  background: linear-gradient(180deg, #D4AF37, #0C2D63);
+}
 
-    color:#666;
-
+.timeline-item:last-child::after {
+  display:none; /* remove no último item */
 }
 
 /* =====================================================
@@ -829,4 +765,136 @@
   z-index: 10;
   background-color: #FCFDFF;
   border-radius: 12px;
+}
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    padding:90px 0 50px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(8,27,58,.96),
+        rgba(6,18,38,1)
+    );
+
+    color:#FFF;
+
+    position:relative;
+
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.footer h2{
+
+    font-family:var(--title);
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    color:var(--gold);
+
+    margin-bottom:30px;
+
+}
+
+.footer p{
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.88);
+
+    margin-bottom:20px;
+
+}
+
+.footer-signature{
+
+    margin-top:45px;
+
+    font-size:1.2rem;
+
+    font-style:italic;
+
+}
+
+.footer-signature strong{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:1.8rem;
+
+    color:var(--gold-light);
+
+    font-family:var(--title);
+
+}
+
+.footer-line{
+
+    width:160px;
+
+    height:2px;
+
+    margin:55px auto 35px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+}
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    font-size:.9rem;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+.footer-credit{
+
+    font-style:italic;
+
+    letter-spacing:1px;
+
+    opacity:.75;
+
+    transition:.35s;
+
+}
+
+.footer-credit:hover{
+
+    opacity:1;
+
+    color:var(--gold);
+
 }

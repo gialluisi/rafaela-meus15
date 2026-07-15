@@ -313,3 +313,53 @@
     }
 
 }
+@media (max-width:768px){
+
+    .footer{
+
+        padding:70px 0 40px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:14px;
+
+    }
+
+    .footer p{
+
+        font-size:1rem;
+
+    }
+
+    .footer-signature strong{
+
+        font-size:1.5rem;
+
+    }
+
+}
+.flight-divider{
+
+    gap:14px;
+
+    margin:50px auto 10px;
+
+}
+
+.divider-line{
+
+    max-width:110px;
+
+}
+
+.divider-plane{
+
+    font-size:1.2rem;
+
+}

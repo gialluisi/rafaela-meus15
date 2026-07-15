@@ -1930,6 +1930,8 @@ textarea:focus-visible{
   overflow: hidden;   /* corta o excesso da imagem */
   border-radius: 50%; /* garante formato circular */
   border: 3px solid #fff;
+  color: #333; /* ou #222 para contraste forte */
+  font-weight: 500; /* dá mais legibilidade */
 }
 
 .boarding-photo img {
@@ -1945,23 +1947,83 @@ textarea:focus-visible{
 }
 
 .photo-slot {
-  width: 350px;           /* mais largo que antes */
+  width: 300px;          /* largura fixa do card */
+  height: 380px;         /* altura fixa do card */
+  border-radius: 12px;
+  border: 3px solid #fff;
+  overflow: hidden;      /* corta o excesso da imagem */
   text-align: center;
 }
 
 .photo-slot img {
-  width: 100%;            /* ocupa toda a largura do slot */
-  max-height: 550px;      /* altura máxima controlada */
-  border-radius: 12px;    /* bordas arredondadas */
-  border: 3px solid #fff;
-  object-fit: cover;      /* corta o excesso sem distorcer */
+  width: 100%;
+  height: 95%;
+  object-fit: cover;     /* ajusta a foto sem distorcer */
   display: block;
-  margin-bottom: 8px;
 }
+
 
 
 .photo-slot small {
   color: #333;
   font-size: 14px;
   display: block;
+}
+.flag {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+/* =====================================================
+   FLIGHT DIVIDER
+===================================================== */
+
+/* =====================================================
+   DIVISOR FINAL
+===================================================== */
+
+.flight-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:22px;
+
+    margin:70px auto 20px;
+
+    width:100%;
+
+}
+
+.divider-line{
+
+    flex:1;
+
+    max-width:260px;
+
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(212,175,55,.9),
+        transparent
+    );
+
+}
+
+.divider-plane{
+
+    font-size:1.5rem;
+
+    color:var(--gold);
+
+    transform:rotate(90deg);
+
+    opacity:.9;
+
 }
