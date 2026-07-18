@@ -1,6 +1,10 @@
 /* =====================================================
    NOTEBOOK
 ===================================================== */
+.timeline-line::before,
+.timeline-line::after {
+  display: none !important;
+}
 
 @media (max-width:1200px){
 
