@@ -243,6 +243,12 @@
 
     }
 
+    .timeline-line,
+    .timeline-line::before,
+    .timeline-line::after {
+    display: none !important;
+  }
+
     .time-box{
 
         padding:25px;
