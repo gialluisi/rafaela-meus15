@@ -120,11 +120,10 @@
         gap:6px;
 
     }
-    .timeline-line,
-    .timeline-line::before,
-    .timeline-line::after {
+   .timeline-item::after {
     display: none !important;
   }
+ 
     .gift-price strong{
 
         font-size:1.15rem;
@@ -243,9 +242,7 @@
 
     }
 
-    .timeline-line,
-    .timeline-line::before,
-    .timeline-line::after {
+  .timeline-item::after {
     display: none !important;
   }
 
