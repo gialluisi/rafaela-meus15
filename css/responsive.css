@@ -1,10 +1,6 @@
 /* =====================================================
    NOTEBOOK
 ===================================================== */
-.timeline-line::before,
-.timeline-line::after {
-  display: none !important;
-}
 
 @media (max-width:1200px){
 
@@ -124,7 +120,11 @@
         gap:6px;
 
     }
-
+    .timeline-line,
+    .timeline-line::before,
+    .timeline-line::after {
+    display: none !important;
+  }
     .gift-price strong{
 
         font-size:1.15rem;
