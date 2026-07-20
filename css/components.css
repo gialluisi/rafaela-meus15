@@ -2048,3 +2048,53 @@ textarea:focus-visible{
         0 0 10px rgba(212,175,55,.35);
 
 }
+/* ===========================================
+   MENSAGEM APÓS PAGAMENTO
+=========================================== */
+
+.payment-message{
+
+    margin:35px auto 0;
+    max-width:720px;
+
+    padding:22px 26px;
+
+    text-align:center;
+
+    background:#EEF6FF;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.payment-message h3{
+
+    margin:0 0 12px;
+
+    color:#0C2D63;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.payment-message p{
+
+    margin:0;
+
+    color:#35537A;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    font-weight:500;
+
+}
